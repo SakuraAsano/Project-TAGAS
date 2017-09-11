@@ -1,0 +1,22 @@
+/* Sass Document */
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+  
+.list {
+  @include clearfix;
+}
+
+@mixin box($width, $bgcolor){
+     width: $width;
+     background-color: $bgcolor;
+}
+  
+section{
+     @include box(640px, rgba(200,200,200,0.7))
+}
